@@ -1,0 +1,46 @@
+x<ListDef> ::= <Def><ListDef> |
+x<Def> ::= 'def' id '(' <ListParam> ')' ':' <Tipo> '{' <ListComan> '}'
+x<ListParam> ::= <Param><ListParam2> |
+x<ListParam2> ::= ',' <Param><ListParam2> |
+x<Param> ::= id':'<Tipo>
+x<Tipo> ::= 'inteiro'
+        | 'real'
+        | 'texto'
+        | 'nada'
+x<ListComan> ::=  | <Coman><ListComan>
+x<Coman> ::= <Decl>
+            | <Atrib>
+            | <Laco>
+            | <Se>
+            | <Ret>
+            | <Entrada>
+            | <Saida>
+            | <Chamada>';'
+            | '{'<ListComan>'}'
+x<Decl> ::= <ListId>':'<Tipo> ';'
+x<ListId> ::= id <ListId2>
+x<ListId2> ::= ',' id <ListId2> |
+x<Atrib> ::= id '=' <ExprArit> ';'
+x<ExprArit> ::= <Termo><ExprArit2>
+x<ExprArit2> ::= <Op1><ExprArit> |
+x<Termo> ::= <Fator><Termo2>
+x<Termo2> ::= <Op2><Termo> |
+x<Fator> ::= <Operando> | <Chamada> | '('<ExprArit>')'
+x<Operando> ::= id
+            | cli /* inteiro */
+            | clr /* real */ 90.0
+            | clt /* texto */ 'meu texto com mais de uma palavra'
+x<Op1> ::= '+' | '-'
+x<Op2> ::= '*' | '/'
+x<Laco> ::= 'enquanto' '(' <ExpreRel> ')' <Coman>
+x<ExpreRel> ::= <ExprArit><Op3><ExprArit>
+x<Op3> ::= '<' | '>' | '>=' | '<=' | '==' | '!='
+x<Se> ::= 'se''('<ExpreRel>')' <Coman> <Senao>
+x<Senao> ::= 'senao' <Coman> |
+x<Ret> ::= 'retorna' <Fator> ';'
+x<Entrada> ::= 'leia''(' id ')'';'
+x<Saida> ::= 'escreva''('<Operando>')'';'
+x<Chamada> ::= 'id''('<ListArg>')'';'
+x<ListArg> ::= <Operando><ListArg2> |
+x<ListArg2> ::= ','<Operando><ListArg2> |
+

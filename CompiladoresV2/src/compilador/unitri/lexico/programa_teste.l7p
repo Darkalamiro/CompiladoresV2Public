@@ -1,0 +1,47 @@
+# Esse é um comentário
+
+def minhaFuncao(numero1: real, numero2: real): real{
+
+    numero3: real;
+    numero3 = 0.0;
+    se( numero1 == numero2){
+        retorna numero1;
+    }
+    senao se (numero1 > numero3){
+        retorna numero1;
+    }
+
+    senao{
+        retorna numero3;
+    }
+
+    leia("Exemplo Texto");
+
+    enquanto(numero1 > numero2){
+        escreva("Exemplo de conjunto de textos");
+    }
+    retorna numero3;
+}
+
+def minhaFuncao1(numero1: real, numero2: real): real{
+
+    numero3: real;
+    numero3 = 0.0;
+    se( numero1 == numero2){
+        retorna numero1;
+    }
+    senao se (numero1 > numero3){
+        retorna numero1;
+    }
+
+    senao{
+        retorna numero3;
+    }
+
+    leia("Exemplo Texto");
+
+    enquanto(numero1 > numero2){
+        escreva("Exemplo de conjunto de textos");
+    }
+    retorna numero3;
+}
